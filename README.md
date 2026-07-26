@@ -1,34 +1,20 @@
-### Zuhair 👋
+### Xianying
 
-iOS developer *in progress* dari Indonesia 🇮🇩 — belajar Swift sambil ngurusin chart di layar sebelah.
+iOS developer, early stage, based in Indonesia. I build small, focused Swift tools and learn SwiftUI by shipping real projects.
 
-```swift
-let zuhair = Developer(
-    from: "Indonesia",
-    building: "RiskKit",
-    learning: ["SwiftUI", "iOS architecture"],
-    alsoInto: ["trading", "Apple Silicon"]
-)
-```
+**Featured**
+- **[RiskKit](https://github.com/zuhairadnansutrisno2502-lab/RiskKit)** — a Swift package that sizes trading positions from a fixed risk budget. Tested, with CI.
 
-**🛠️ Lagi dibangun**
-- [**RiskKit**](https://github.com/zuhairadnansutrisno2502-lab/RiskKit) — library Swift buat menghitung *position size* & *risk/reward* trading. Ada test + CI.
+**Now**
+- Learning SwiftUI and iOS app architecture
+- Building small trading utilities I actually use
 
-**📈 Di luar coding**
-- Trading crypto (buat dipakai, bukan dipamerin) dan ngoprek MacBook Air M4 biar ngebut.
+**Stack** — Swift · SwiftUI · Git
 
-**🧰 Tech**
-
-![Swift](https://img.shields.io/badge/Swift-F05138?style=flat&logo=swift&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-0A84FF?style=flat&logo=swift&logoColor=white)
-![Xcode](https://img.shields.io/badge/Xcode-147EFB?style=flat&logo=xcode&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
+**[Portfolio →](https://zuhairadnansutrisno2502-lab.github.io/portfolio-site/)**
 
 <div align="center">
 
 ![stats](https://github-readme-stats.vercel.app/api?username=zuhairadnansutrisno2502-lab&show_icons=true&hide_border=true&count_private=true&theme=transparent)
 
 </div>
-
-<sub>chart-nya hijau semua? itu di GitHub, bukan di portofolio 📈</sub>
