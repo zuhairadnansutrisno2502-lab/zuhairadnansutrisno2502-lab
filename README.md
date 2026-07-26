@@ -1,15 +1,12 @@
 ### Xianying
 
-iOS developer, early stage, based in Indonesia. I build small, focused Swift tools and learn SwiftUI by shipping real projects.
+Based in Indonesia. I build small things in my spare time — coding is a hobby I enjoy, not a job.
 
 **Featured**
-- **[RiskKit](https://github.com/zuhairadnansutrisno2502-lab/RiskKit)** — a Swift package that sizes trading positions from a fixed risk budget. Tested, with CI.
+- **[RiskKit](https://github.com/zuhairadnansutrisno2502-lab/RiskKit)** — a small Swift package that sizes trading positions from a fixed risk budget. Tested, with CI.
 
 **Now**
-- Learning SwiftUI and iOS app architecture
-- Building small trading utilities I actually use
-
-**Stack** — Swift · SwiftUI · Git
+- Tinkering with little tools and ideas, one weekend at a time
 
 **[Portfolio →](https://zuhairadnansutrisno2502-lab.github.io/portfolio-site/)**
 
