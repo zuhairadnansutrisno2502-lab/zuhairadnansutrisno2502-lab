@@ -12,7 +12,7 @@ let zuhair = Developer(
 ```
 
 **🛠️ Lagi dibangun**
-- [**RiskKit**](https://github.com/USERNAME/RiskKit) — library Swift buat menghitung *position size* & *risk/reward* trading. Ada test + CI.
+- [**RiskKit**](https://github.com/zuhairadnansutrisno2502-lab/RiskKit) — library Swift buat menghitung *position size* & *risk/reward* trading. Ada test + CI.
 
 **📈 Di luar coding**
 - Trading crypto (buat dipakai, bukan dipamerin) dan ngoprek MacBook Air M4 biar ngebut.
@@ -27,7 +27,7 @@ let zuhair = Developer(
 
 <div align="center">
 
-![stats](https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&hide_border=true&count_private=true&theme=transparent)
+![stats](https://github-readme-stats.vercel.app/api?username=zuhairadnansutrisno2502-lab&show_icons=true&hide_border=true&count_private=true&theme=transparent)
 
 </div>
 
