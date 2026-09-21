@@ -1,6 +1,6 @@
-<img src="assets/header.svg" width="100%" alt="Xianying — hobby developer from Indonesia. Small CLI tools around git, and Roblox games in Luau.">
+<a href="https://github.com/zuhairadnansutrisno2502-lab?tab=repositories"><img src="assets/header.svg" width="100%" alt="Xianying — hobby developer. Small CLI tools around git, and Roblox games in Luau."></a>
 
-Hobby developer from Indonesia. I mostly make small command-line tools that poke fun at git — each one runs with a single `npx`, nothing to install. These days most of my spare time goes into Roblox games written in Luau.
+I mostly make small command-line tools that poke fun at git — each one runs with a single `npx`, nothing to install. These days most of my spare time goes into Roblox games written in Luau.
 
 <sub>TypeScript · Node.js · Luau · Roblox Studio · Swift · Python</sub>
 

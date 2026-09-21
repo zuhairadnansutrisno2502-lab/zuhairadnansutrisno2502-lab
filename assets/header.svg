@@ -1,69 +1,131 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280" role="img" aria-labelledby="t">
-  <title id="t">Xianying — hobby developer from Indonesia. Small CLI tools around git, and Roblox games in Luau.</title>
+  <title id="t">Xianying — hobby developer. Small CLI tools around git, and Roblox games in Luau.</title>
   <defs>
     <clipPath id="frame"><rect width="800" height="280" rx="16"/></clipPath>
-    <filter id="aurora" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="55"/></filter>
-    <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>
+    <clipPath id="name"><text x="45" y="152" font-size="64" font-weight="700" letter-spacing="-1.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Xianying</text></clipPath>
+    <filter id="aurora" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="50"/></filter>
+    <filter id="bloom" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="3.5"/></filter>
+    <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
+    <linearGradient id="shine" x1="0" x2="1">
+      <stop offset="0" stop-color="#39c5cf" stop-opacity="0"/>
+      <stop offset=".45" stop-color="#39c5cf"/>
+      <stop offset=".55" stop-color="#a371f7"/>
+      <stop offset="1" stop-color="#a371f7" stop-opacity="0"/>
+    </linearGradient>
   </defs>
   <style>
     .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .drift1 { animation: drift1 18s ease-in-out infinite alternate; }
-    .drift2 { animation: drift2 22s ease-in-out infinite alternate; }
-    .flow { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 14 200; animation: flow 6s ease-in-out infinite; }
-    .f2 { animation-delay: 1.2s; } .f3 { animation-delay: 2.4s; }
-    .ping { opacity: 0; animation: ping 6s ease-in-out infinite; }
-    @keyframes drift1 { to { transform: translate(-110px, 50px); } }
-    @keyframes drift2 { to { transform: translate(70px, -60px); } }
-    @keyframes flow { from { stroke-dashoffset: 14; } 70%, to { stroke-dashoffset: -100; } }
-    @keyframes ping { 0%, 100% { opacity: 0; } 8% { opacity: .9; } 30% { opacity: 0; } }
-    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    .fx { transform-box: fill-box; transform-origin: center; }
+    .drift1 { animation: drift1 16s ease-in-out infinite alternate; }
+    .drift2 { animation: drift2 20s ease-in-out infinite alternate; }
+    .drift3 { animation: drift3 13s ease-in-out infinite alternate; }
+    .shine { animation: shine 6s ease-in-out infinite; }
+    .flow { fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 7 43; animation: flow linear infinite; }
+    .glow .flow { stroke-width: 7; }
+    .fm { animation-duration: 5s; } .fa { animation-duration: 3.6s; } .fb { animation-duration: 4.4s; } .fc { animation-duration: 2.8s; }
+    .ripple { animation: ripple 2.4s ease-out infinite; }
+    .burst { animation: burst 2.4s ease-out infinite; }
+    .star { animation: twinkle 3s ease-in-out infinite; }
+    .head { animation: beat 1.2s ease-in-out infinite; }
+    @keyframes drift1 { to { transform: translate(-120px, 50px); } }
+    @keyframes drift2 { to { transform: translate(80px, -60px); } }
+    @keyframes drift3 { to { transform: translate(-60px, -40px); } }
+    @keyframes shine { 0% { transform: translateX(-260px); } 60%, 100% { transform: translateX(380px); } }
+    @keyframes flow { to { stroke-dashoffset: -100; } }
+    @keyframes ripple { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(3.2); opacity: 0; } }
+    @keyframes burst { 0% { transform: scale(.3) rotate(0deg); opacity: 0; } 12% { opacity: 1; } 60%, 100% { transform: scale(1.5) rotate(20deg); opacity: 0; } }
+    @keyframes twinkle { 0%, 100% { opacity: .15; } 50% { opacity: 1; } }
+    @keyframes beat { 50% { transform: scale(1.35); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .ripple, .burst, .shine { opacity: 0; } }
   </style>
 
+  <!-- backdrop -->
   <g clip-path="url(#frame)">
     <rect width="800" height="280" fill="#0a0d12"/>
     <g filter="url(#aurora)">
-      <ellipse class="drift1" cx="660" cy="40" rx="190" ry="110" fill="#a371f7" opacity=".32"/>
-      <ellipse class="drift2" cx="720" cy="270" rx="170" ry="100" fill="#39c5cf" opacity=".2"/>
+      <ellipse class="drift1" cx="640" cy="40" rx="190" ry="110" fill="#a371f7" opacity=".42"/>
+      <ellipse class="drift2" cx="720" cy="270" rx="170" ry="100" fill="#39c5cf" opacity=".3"/>
+      <ellipse class="drift3" cx="520" cy="230" rx="120" ry="70" fill="#f778ba" opacity=".18"/>
+    </g>
+    <g fill="#ffffff">
+      <circle class="star" cx="430" cy="40" r="1.2"/>
+      <circle class="star" cx="505" cy="250" r="1" style="animation-delay:.6s"/>
+      <circle class="star" cx="560" cy="30" r="1.4" style="animation-delay:1.2s"/>
+      <circle class="star" cx="620" cy="255" r="1.1" style="animation-delay:1.8s"/>
+      <circle class="star" cx="690" cy="45" r="1.3" style="animation-delay:.3s"/>
+      <circle class="star" cx="745" cy="235" r="1" style="animation-delay:2.1s"/>
+      <circle class="star" cx="785" cy="80" r="1.2" style="animation-delay:1.5s"/>
+      <circle class="star" cx="470" cy="205" r="1" style="animation-delay:2.6s"/>
+      <circle class="star" cx="600" cy="125" r=".9" style="animation-delay:.9s"/>
+      <circle class="star" cx="380" cy="250" r="1" style="animation-delay:2.3s"/>
     </g>
   </g>
   <rect x=".5" y=".5" width="799" height="279" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity=".08"/>
 
   <!-- text -->
-  <text class="sans" x="48" y="86" font-size="13" font-weight="600" letter-spacing="2.5" fill="#7d8590">HOBBY DEVELOPER  ·  INDONESIA</text>
+  <text class="sans" x="48" y="86" font-size="13" font-weight="600" letter-spacing="2.5" fill="#7d8590">HOBBY DEVELOPER  ·  OPEN SOURCE</text>
   <text class="sans" x="45" y="152" font-size="64" font-weight="700" letter-spacing="-1.5" fill="#f0f6fc">Xianying</text>
+  <g clip-path="url(#name)"><rect class="shine" x="45" y="90" width="200" height="80" fill="url(#shine)" opacity=".9"/></g>
   <text class="sans" x="48" y="198" font-size="22" fill="#9da7b3">Small CLI tools around <tspan fill="#e6edf3">git</tspan>,</text>
   <text class="sans" x="48" y="229" font-size="22" fill="#9da7b3">and Roblox games in <tspan fill="#e6edf3">Luau</tspan>.</text>
 
-  <!-- git graph: history flowing left to right, merging into main -->
+  <!-- git graph: four branches flowing into main -->
   <g stroke="#30363d" stroke-width="2" fill="none" stroke-linecap="round">
-    <path d="M500 150 H760"/>
-    <path d="M545 150 C575 150 575 95 605 95 H655 C685 95 685 150 715 150"/>
-    <path d="M600 150 C625 150 625 205 650 205 H665 C690 205 690 150 715 150"/>
+    <path d="M420 150 H770"/>
+    <path d="M455 150 C485 150 485 95 515 95 H585 C615 95 615 150 645 150"/>
+    <path d="M520 150 C550 150 550 210 580 210 H680 C710 210 710 150 740 150"/>
+    <path d="M665 150 C685 150 685 100 705 100 H720 C745 100 745 150 770 150"/>
   </g>
-  <path class="flow" pathLength="100" stroke="#39c5cf" d="M500 150 H760"/>
-  <path class="flow f2" pathLength="100" stroke="#a371f7" d="M545 150 C575 150 575 95 605 95 H655 C685 95 685 150 715 150"/>
-  <path class="flow f3" pathLength="100" stroke="#a371f7" d="M600 150 C625 150 625 205 650 205 H665 C690 205 690 150 715 150"/>
+  <g class="glow" filter="url(#bloom)" opacity=".9">
+    <path class="flow fm" pathLength="100" stroke="#39c5cf" d="M420 150 H770"/>
+    <path class="flow fa" pathLength="100" stroke="#a371f7" d="M455 150 C485 150 485 95 515 95 H585 C615 95 615 150 645 150"/>
+    <path class="flow fb" pathLength="100" stroke="#f778ba" d="M520 150 C550 150 550 210 580 210 H680 C710 210 710 150 740 150"/>
+    <path class="flow fc" pathLength="100" stroke="#e3b341" d="M665 150 C685 150 685 100 705 100 H720 C745 100 745 150 770 150"/>
+  </g>
+  <g>
+    <path class="flow fm" pathLength="100" stroke="#39c5cf" d="M420 150 H770"/>
+    <path class="flow fa" pathLength="100" stroke="#a371f7" d="M455 150 C485 150 485 95 515 95 H585 C615 95 615 150 645 150"/>
+    <path class="flow fb" pathLength="100" stroke="#f778ba" d="M520 150 C550 150 550 210 580 210 H680 C710 210 710 150 740 150"/>
+    <path class="flow fc" pathLength="100" stroke="#e3b341" d="M665 150 C685 150 685 100 705 100 H720 C745 100 745 150 770 150"/>
+  </g>
 
-  <g fill="#39c5cf" filter="url(#soft)">
-    <circle class="ping" cx="545" cy="150" r="9" style="animation-delay:.9s"/>
-    <circle class="ping" cx="715" cy="150" r="9" style="animation-delay:3.4s"/>
-    <circle class="ping" cx="760" cy="150" r="9" style="animation-delay:4s"/>
+  <!-- ripples as commits land -->
+  <g fill="none" stroke-width="1.5">
+    <circle class="fx ripple" cx="530" cy="95" r="6" stroke="#a371f7" style="animation-delay:.2s"/>
+    <circle class="fx ripple" cx="575" cy="95" r="6" stroke="#a371f7" style="animation-delay:1s"/>
+    <circle class="fx ripple" cx="605" cy="210" r="6" stroke="#f778ba" style="animation-delay:.5s"/>
+    <circle class="fx ripple" cx="655" cy="210" r="6" stroke="#f778ba" style="animation-delay:1.4s"/>
+    <circle class="fx ripple" cx="712" cy="100" r="6" stroke="#e3b341" style="animation-delay:.8s"/>
+    <circle class="fx ripple" cx="645" cy="150" r="6" stroke="#39c5cf" style="animation-delay:1.7s"/>
+    <circle class="fx ripple" cx="740" cy="150" r="6" stroke="#39c5cf" style="animation-delay:2s"/>
+    <circle class="fx ripple" cx="770" cy="150" r="8" stroke="#39c5cf"/>
+    <circle class="fx ripple" cx="770" cy="150" r="8" stroke="#a371f7" style="animation-delay:1.2s"/>
   </g>
-  <g fill="#a371f7" filter="url(#soft)">
-    <circle class="ping" cx="615" cy="95" r="9" style="animation-delay:2s"/>
-    <circle class="ping" cx="655" cy="95" r="9" style="animation-delay:2.6s"/>
-    <circle class="ping" cx="657" cy="205" r="9" style="animation-delay:3.4s"/>
-  </g>
+
+  <!-- commits -->
   <g fill="#0a0d12" stroke-width="2">
-    <circle cx="500" cy="150" r="5" stroke="#6e7681"/>
-    <circle cx="545" cy="150" r="5" stroke="#6e7681"/>
-    <circle cx="600" cy="150" r="5" stroke="#6e7681"/>
-    <circle cx="615" cy="95" r="5" stroke="#a371f7"/>
-    <circle cx="655" cy="95" r="5" stroke="#a371f7"/>
-    <circle cx="657" cy="205" r="5" stroke="#a371f7"/>
-    <circle cx="715" cy="150" r="6" stroke="#39c5cf"/>
-    <circle cx="760" cy="150" r="6" stroke="#39c5cf" fill="#39c5cf"/>
+    <circle cx="420" cy="150" r="4.5" stroke="#6e7681"/>
+    <circle cx="455" cy="150" r="4.5" stroke="#6e7681"/>
+    <circle cx="520" cy="150" r="4.5" stroke="#6e7681"/>
+    <circle cx="530" cy="95" r="5" stroke="#a371f7"/>
+    <circle cx="575" cy="95" r="5" stroke="#a371f7"/>
+    <circle cx="605" cy="210" r="5" stroke="#f778ba"/>
+    <circle cx="655" cy="210" r="5" stroke="#f778ba"/>
+    <circle cx="712" cy="100" r="5" stroke="#e3b341"/>
+    <circle cx="645" cy="150" r="5.5" stroke="#39c5cf"/>
+    <circle cx="740" cy="150" r="5.5" stroke="#39c5cf"/>
   </g>
-  <text class="mono" x="760" y="178" text-anchor="middle" font-size="12" fill="#7d8590">main</text>
+
+  <!-- HEAD: sparks + beating node -->
+  <g class="fx burst" stroke-width="2" stroke-linecap="round">
+    <path d="M770 136 V128" stroke="#39c5cf"/><path d="M770 164 V172" stroke="#39c5cf"/>
+    <path d="M756 150 H748" stroke="#a371f7"/><path d="M784 150 H792" stroke="#a371f7"/>
+    <path d="M760 140 L754 134" stroke="#f778ba"/><path d="M780 160 L786 166" stroke="#f778ba"/>
+    <path d="M780 140 L786 134" stroke="#e3b341"/><path d="M760 160 L754 166" stroke="#e3b341"/>
+  </g>
+  <circle cx="770" cy="150" r="11" fill="#39c5cf" filter="url(#soft)" opacity=".7"/>
+  <circle class="fx head" cx="770" cy="150" r="6.5" fill="#39c5cf"/>
+  <rect x="749" y="178" width="42" height="18" rx="9" fill="#39c5cf" fill-opacity=".12" stroke="#39c5cf" stroke-opacity=".5"/>
+  <text class="mono" x="770" y="191" text-anchor="middle" font-size="11" fill="#39c5cf">main</text>
 </svg>
