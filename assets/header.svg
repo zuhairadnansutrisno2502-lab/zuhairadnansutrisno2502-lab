@@ -1,65 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280" role="img" aria-labelledby="t">
-  <title id="t">Xianying — hobby developer. Small CLI tools around git, and Roblox games in Luau.</title>
+  <title id="t">Xianying — hobby developer. Small CLI tools around git, and Roblox games in Luau. Beside the name, Snitchy from git-sorry shouts through a megaphone and Croupy from blame-roulette spins a roulette wheel, hunting down who wrote the bad line on their laptop.</title>
   <defs>
     <clipPath id="frame"><rect width="800" height="280" rx="16"/></clipPath>
     <clipPath id="name"><text x="45" y="152" font-size="64" font-weight="700" letter-spacing="-1.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Xianying</text></clipPath>
     <filter id="aurora" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="50"/></filter>
-    <filter id="bloom" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="3.5"/></filter>
-    <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
     <linearGradient id="shine" x1="0" x2="1">
-      <stop offset="0" stop-color="#39c5cf" stop-opacity="0"/>
-      <stop offset=".45" stop-color="#39c5cf"/>
-      <stop offset=".55" stop-color="#a371f7"/>
-      <stop offset="1" stop-color="#a371f7" stop-opacity="0"/>
+      <stop offset="0" stop-color="#39c5cf" stop-opacity="0"/><stop offset=".45" stop-color="#39c5cf"/>
+      <stop offset=".55" stop-color="#a371f7"/><stop offset="1" stop-color="#a371f7" stop-opacity="0"/>
     </linearGradient>
   </defs>
   <style>
     .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
     .fx { transform-box: fill-box; transform-origin: center; }
     .drift1 { animation: drift1 16s ease-in-out infinite alternate; }
     .drift2 { animation: drift2 20s ease-in-out infinite alternate; }
-    .drift3 { animation: drift3 13s ease-in-out infinite alternate; }
     .shine { animation: shine 6s ease-in-out infinite; }
-    .flow { fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 7 43; animation: flow linear infinite; }
-    .glow .flow { stroke-width: 7; }
-    .fm { animation-duration: 5s; } .fa { animation-duration: 3.6s; } .fb { animation-duration: 4.4s; } .fc { animation-duration: 2.8s; }
-    .ripple { animation: ripple 2.4s ease-out infinite; }
-    .burst { animation: burst 2.4s ease-out infinite; }
     .star { animation: twinkle 3s ease-in-out infinite; }
-    .head { animation: beat 1.2s ease-in-out infinite; }
+    .bob1 { animation: bob 2.6s ease-in-out infinite; }
+    .bob2 { animation: bob 3.2s ease-in-out .5s infinite; }
+    .blink { animation: blink 4s infinite; } .b-late { animation-delay: 1.7s; }
+    .spin { animation: spin 12s infinite; }
+    .shout { opacity: 0; animation: shout 12s infinite; }
+    .buzz { animation: buzz .3s ease-in-out infinite alternate; }
+    .b { opacity: 0; transform-origin: 50% 100%; animation: 12s infinite; }
+    .b1 { animation-name: b1; } .b2 { animation-name: b2; } .b3 { animation-name: b3; } .b4 { animation-name: b4; }
+    .hl { animation: hl 1s steps(1) infinite; }
+    .steam { opacity: 0; animation: steam 2.4s ease-out infinite; }
     @keyframes drift1 { to { transform: translate(-120px, 50px); } }
     @keyframes drift2 { to { transform: translate(80px, -60px); } }
-    @keyframes drift3 { to { transform: translate(-60px, -40px); } }
     @keyframes shine { 0% { transform: translateX(-260px); } 60%, 100% { transform: translateX(380px); } }
-    @keyframes flow { to { stroke-dashoffset: -100; } }
-    @keyframes ripple { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(3.2); opacity: 0; } }
-    @keyframes burst { 0% { transform: scale(.3) rotate(0deg); opacity: 0; } 12% { opacity: 1; } 60%, 100% { transform: scale(1.5) rotate(20deg); opacity: 0; } }
     @keyframes twinkle { 0%, 100% { opacity: .15; } 50% { opacity: 1; } }
-    @keyframes beat { 50% { transform: scale(1.35); } }
-    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .ripple, .burst, .shine { opacity: 0; } }
+    @keyframes bob { 50% { transform: translateY(-9px); } }
+    @keyframes blink { 0%, 93%, 100% { transform: scaleY(1); } 96% { transform: scaleY(.1); } }
+    @keyframes spin { 0%, 25% { transform: rotate(0deg); animation-timing-function: cubic-bezier(.15, .75, .3, 1); } 46%, 100% { transform: rotate(1080deg); } }
+    @keyframes shout { 0%, 21% { opacity: 1; } 23%, 49% { opacity: 0; } 51%, 71% { opacity: 1; } 73%, 100% { opacity: 0; } }
+    @keyframes buzz { to { transform: scale(1.25); } }
+    @keyframes b1 { 0% { opacity: 0; transform: scale(.5); } 3%, 20% { opacity: 1; transform: scale(1); } 23%, 100% { opacity: 0; transform: scale(.9); } }
+    @keyframes b2 { 0%, 25% { opacity: 0; transform: scale(.5); } 28%, 45% { opacity: 1; transform: scale(1); } 48%, 100% { opacity: 0; transform: scale(.9); } }
+    @keyframes b3 { 0%, 50% { opacity: 0; transform: scale(.5); } 53%, 70% { opacity: 1; transform: scale(1); } 73%, 100% { opacity: 0; transform: scale(.9); } }
+    @keyframes b4 { 0%, 75% { opacity: 0; transform: scale(.5); } 78%, 95% { opacity: 1; transform: scale(1); } 98%, 100% { opacity: 0; transform: scale(.9); } }
+    @keyframes hl { 50% { opacity: .25; } }
+    @keyframes steam { 0% { opacity: 0; transform: translateY(4px); } 30% { opacity: .8; } 100% { opacity: 0; transform: translateY(-14px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .b1 { opacity: 1; } .shine { opacity: 0; } }
   </style>
 
   <!-- backdrop -->
   <g clip-path="url(#frame)">
     <rect width="800" height="280" fill="#0a0d12"/>
     <g filter="url(#aurora)">
-      <ellipse class="drift1" cx="640" cy="40" rx="190" ry="110" fill="#a371f7" opacity=".42"/>
-      <ellipse class="drift2" cx="720" cy="270" rx="170" ry="100" fill="#39c5cf" opacity=".3"/>
-      <ellipse class="drift3" cx="520" cy="230" rx="120" ry="70" fill="#f778ba" opacity=".18"/>
+      <ellipse class="drift1" cx="640" cy="40" rx="190" ry="110" fill="#a371f7" opacity=".38"/>
+      <ellipse class="drift2" cx="720" cy="270" rx="170" ry="100" fill="#39c5cf" opacity=".26"/>
     </g>
     <g fill="#ffffff">
-      <circle class="star" cx="430" cy="40" r="1.2"/>
-      <circle class="star" cx="505" cy="250" r="1" style="animation-delay:.6s"/>
-      <circle class="star" cx="560" cy="30" r="1.4" style="animation-delay:1.2s"/>
-      <circle class="star" cx="620" cy="255" r="1.1" style="animation-delay:1.8s"/>
-      <circle class="star" cx="690" cy="45" r="1.3" style="animation-delay:.3s"/>
-      <circle class="star" cx="745" cy="235" r="1" style="animation-delay:2.1s"/>
-      <circle class="star" cx="785" cy="80" r="1.2" style="animation-delay:1.5s"/>
-      <circle class="star" cx="470" cy="205" r="1" style="animation-delay:2.6s"/>
-      <circle class="star" cx="600" cy="125" r=".9" style="animation-delay:.9s"/>
-      <circle class="star" cx="380" cy="250" r="1" style="animation-delay:2.3s"/>
+      <circle class="star" cx="430" cy="30" r="1.2"/><circle class="star" cx="560" cy="24" r="1.4" style="animation-delay:1.2s"/>
+      <circle class="star" cx="600" cy="120" r="1" style="animation-delay:.9s"/><circle class="star" cx="785" cy="30" r="1.2" style="animation-delay:1.5s"/>
+      <circle class="star" cx="380" cy="250" r="1" style="animation-delay:2.3s"/><circle class="star" cx="560" cy="150" r="1" style="animation-delay:.3s"/>
     </g>
+    <!-- floor glow -->
+    <ellipse cx="590" cy="262" rx="230" ry="16" fill="#a371f7" opacity=".14" filter="url(#soft)"/>
   </g>
   <rect x=".5" y=".5" width="799" height="279" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity=".08"/>
 
@@ -70,62 +69,204 @@
   <text class="sans" x="48" y="198" font-size="22" fill="#9da7b3">Small CLI tools around <tspan fill="#e6edf3">git</tspan>,</text>
   <text class="sans" x="48" y="229" font-size="22" fill="#9da7b3">and Roblox games in <tspan fill="#e6edf3">Luau</tspan>.</text>
 
-  <!-- git graph: four branches flowing into main -->
-  <g stroke="#30363d" stroke-width="2" fill="none" stroke-linecap="round">
-    <path d="M420 150 H770"/>
-    <path d="M455 150 C485 150 485 95 515 95 H585 C615 95 615 150 645 150"/>
-    <path d="M520 150 C550 150 550 210 580 210 H680 C710 210 710 150 740 150"/>
-    <path d="M665 150 C685 150 685 100 705 100 H720 C745 100 745 150 770 150"/>
-  </g>
-  <g class="glow" filter="url(#bloom)" opacity=".9">
-    <path class="flow fm" pathLength="100" stroke="#39c5cf" d="M420 150 H770"/>
-    <path class="flow fa" pathLength="100" stroke="#a371f7" d="M455 150 C485 150 485 95 515 95 H585 C615 95 615 150 645 150"/>
-    <path class="flow fb" pathLength="100" stroke="#f778ba" d="M520 150 C550 150 550 210 580 210 H680 C710 210 710 150 740 150"/>
-    <path class="flow fc" pathLength="100" stroke="#e3b341" d="M665 150 C685 150 685 100 705 100 H720 C745 100 745 150 770 150"/>
+  <!-- the desk they share -->
+  <g stroke="#11121a" stroke-linejoin="round">
+    <path d="M 540 246 V 264 M 660 246 V 264" stroke-width="3" stroke-linecap="round"/>
+    <rect x="528" y="238" width="144" height="9" rx="3" fill="#2a2f45" stroke-width="2.5"/>
+    <!-- laptop -->
+    <rect x="560" y="190" width="72" height="44" rx="4" fill="#414868" stroke-width="2.5"/>
+    <rect x="565" y="195" width="62" height="34" rx="2" fill="#16161e" stroke-width="1.5"/>
+    <path d="M 554 234 H 638 L 644 238 H 548 Z" fill="#414868" stroke-width="2.5"/>
   </g>
   <g>
-    <path class="flow fm" pathLength="100" stroke="#39c5cf" d="M420 150 H770"/>
-    <path class="flow fa" pathLength="100" stroke="#a371f7" d="M455 150 C485 150 485 95 515 95 H585 C615 95 615 150 645 150"/>
-    <path class="flow fb" pathLength="100" stroke="#f778ba" d="M520 150 C550 150 550 210 580 210 H680 C710 210 710 150 740 150"/>
-    <path class="flow fc" pathLength="100" stroke="#e3b341" d="M665 150 C685 150 685 100 705 100 H720 C745 100 745 150 770 150"/>
+    <rect x="570" y="200" width="30" height="3" rx="1.5" fill="#7aa2f7"/>
+    <rect x="576" y="207" width="38" height="3" rx="1.5" fill="#9ece6a"/>
+    <rect class="hl" x="567" y="212.5" width="58" height="6" rx="1.5" fill="#f7768e" opacity=".35"/>
+    <rect x="576" y="214" width="44" height="3" rx="1.5" fill="#f7768e"/>
+    <rect x="570" y="221" width="24" height="3" rx="1.5" fill="#e0af68"/>
+  </g>
+  <!-- coffee -->
+  <g stroke="#11121a" stroke-width="2">
+    <path d="M 536 224 H 550 V 234 Q 550 238 546 238 H 540 Q 536 238 536 234 Z" fill="#ece3cf"/>
+    <path d="M 550 227 Q 555 227 555 231 Q 555 235 550 235" fill="none"/>
+  </g>
+  <g stroke="#c0caf5" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <path class="steam" d="M 541 219 q -3 -4 0 -8"/>
+    <path class="steam" d="M 546 219 q 3 -4 0 -8" style="animation-delay:1.2s"/>
   </g>
 
-  <!-- ripples as commits land -->
-  <g fill="none" stroke-width="1.5">
-    <circle class="fx ripple" cx="530" cy="95" r="6" stroke="#a371f7" style="animation-delay:.2s"/>
-    <circle class="fx ripple" cx="575" cy="95" r="6" stroke="#a371f7" style="animation-delay:1s"/>
-    <circle class="fx ripple" cx="605" cy="210" r="6" stroke="#f778ba" style="animation-delay:.5s"/>
-    <circle class="fx ripple" cx="655" cy="210" r="6" stroke="#f778ba" style="animation-delay:1.4s"/>
-    <circle class="fx ripple" cx="712" cy="100" r="6" stroke="#e3b341" style="animation-delay:.8s"/>
-    <circle class="fx ripple" cx="645" cy="150" r="6" stroke="#39c5cf" style="animation-delay:1.7s"/>
-    <circle class="fx ripple" cx="740" cy="150" r="6" stroke="#39c5cf" style="animation-delay:2s"/>
-    <circle class="fx ripple" cx="770" cy="150" r="8" stroke="#39c5cf"/>
-    <circle class="fx ripple" cx="770" cy="150" r="8" stroke="#a371f7" style="animation-delay:1.2s"/>
+  <!-- Snitchy (git-sorry) -->
+  <g transform="translate(375.4 74) scale(.44)"><g class="bob1">
+  <!-- shadow -->
+  <ellipse cx="215" cy="424" rx="105" ry="11" fill="#0e0f16" opacity="0.45"/>
+
+  <!-- body -->
+  <path d="M 150 210 C 148 158 282 156 284 208 C 290 262 296 330 298 386 C 299 412 133 414 136 388 C 139 330 146 262 150 210 Z"
+        fill="#f0e0c0" stroke="#11121a" stroke-width="3.5"/>
+
+  <!-- left arm, pointing at whoever wrote it -->
+  <path d="M 154 290 C 130 284 106 274 86 264 L 92 248 C 112 256 136 266 156 272 Z" fill="#414868" stroke="#11121a" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="80" cy="254" r="11" fill="#f0e0c0" stroke="#11121a" stroke-width="2.5"/>
+  <path d="M 72 248 C 62 245 50 242 42 240 C 39 244 40 248 43 250 C 51 252 62 254 71 257 Z" fill="#f0e0c0" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- right arm with the megaphone -->
+  <path d="M 280 288 C 300 278 316 264 328 250 L 316 236 C 304 250 290 262 274 272 Z" fill="#414868" stroke="#11121a" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="328" cy="242" r="10" fill="#f0e0c0" stroke="#11121a" stroke-width="2.5"/>
+  <path d="M 332 240 L 324 258" stroke="#11121a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 329 228 L 339 244 L 407 218 L 381 178 Z" fill="#f7768e" stroke="#11121a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M 384 182 C 397 193 401 205 404 214" fill="none" stroke="#11121a" stroke-width="2" opacity="0.6"/>
+  <g class="shout"><g class="fx buzz"><path d="M 405 178 L 420 162 M 410 192 L 432 186 M 404 208 L 420 220" stroke="#e0af68" stroke-width="3.5" stroke-linecap="round"/></g></g>
+
+  <!-- coat -->
+  <path d="M 141 284 C 190 266 246 266 293 282 L 298 388 C 299 412 133 414 136 388 Z" fill="#414868" stroke="#11121a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M 148 276 L 168 252 L 186 276 Z" fill="#4a5170" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 286 274 L 266 250 L 250 274 Z" fill="#4a5170" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 210 268 L 228 267 L 219 306 Z" fill="#ece3cf" stroke="#11121a" stroke-width="2"/>
+  <path d="M 178 272 L 210 268 L 192 312 Z" fill="#333a54" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 258 270 L 228 267 L 246 310 Z" fill="#333a54" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 139 344 L 296 342 L 297 362 L 138 364 Z" fill="#2a2f45" stroke="#11121a" stroke-width="2.5"/>
+  <rect x="204" y="344" width="26" height="18" rx="3" fill="#e0af68" stroke="#11121a" stroke-width="2"/>
+
+  <!-- slicked-back hair -->
+  <path d="M 152 196 C 150 168 178 152 216 150 C 258 148 284 166 283 194 C 284 176 278 172 266 178 C 258 164 246 162 238 172 C 226 158 206 160 200 174 C 188 164 174 168 172 182 C 162 178 154 184 152 196 Z"
+        fill="#16161e" stroke="#11121a" stroke-width="2"/>
+  <path d="M 190 160 C 205 155 225 154 240 158" fill="none" stroke="#414868" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- the crown Snitchy bought for itself -->
+  <g transform="rotate(-14 196 140)">
+    <path d="M 168 156 L 173 128 L 189 146 L 202 120 L 215 145 L 231 126 L 236 154 Q 202 162 168 156 Z" fill="#e0af68" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="178" cy="150" r="2.5" fill="#f7768e"/>
+    <circle cx="202" cy="152" r="2.5" fill="#f7768e"/>
+    <circle cx="226" cy="150" r="2.5" fill="#f7768e"/>
   </g>
 
-  <!-- commits -->
-  <g fill="#0a0d12" stroke-width="2">
-    <circle cx="420" cy="150" r="4.5" stroke="#6e7681"/>
-    <circle cx="455" cy="150" r="4.5" stroke="#6e7681"/>
-    <circle cx="520" cy="150" r="4.5" stroke="#6e7681"/>
-    <circle cx="530" cy="95" r="5" stroke="#a371f7"/>
-    <circle cx="575" cy="95" r="5" stroke="#a371f7"/>
-    <circle cx="605" cy="210" r="5" stroke="#f778ba"/>
-    <circle cx="655" cy="210" r="5" stroke="#f778ba"/>
-    <circle cx="712" cy="100" r="5" stroke="#e3b341"/>
-    <circle cx="645" cy="150" r="5.5" stroke="#39c5cf"/>
-    <circle cx="740" cy="150" r="5.5" stroke="#39c5cf"/>
+  <!-- smug face -->
+  <path d="M 170 197 Q 186 186 205 192" fill="none" stroke="#11121a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 235 194 Q 252 188 269 193" fill="none" stroke="#11121a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 176 214 Q 191 205 206 213" fill="none" stroke="#11121a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 236 211 Q 251 202 266 210" fill="none" stroke="#11121a" stroke-width="4" stroke-linecap="round"/>
+  <g class="fx blink"><circle cx="183" cy="220" r="5.5" fill="#11121a"/>
+  <circle cx="243" cy="217" r="5.5" fill="#11121a"/></g>
+  <path d="M 180 228 Q 191 231 202 228" fill="none" stroke="#11121a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 240 225 Q 251 228 262 225" fill="none" stroke="#11121a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 197 252 C 215 264 240 262 254 249 C 258 245 259 241 257 238" fill="none" stroke="#11121a" stroke-width="3.5" stroke-linecap="round"/>
+
+  </g></g>
+
+  <!-- Croupy (blame-roulette) -->
+  <g transform="translate(605.4 74) scale(.44)"><g class="bob2">
+  <!-- shadow -->
+  <ellipse cx="215" cy="424" rx="105" ry="11" fill="#0e0f16" opacity="0.45"/>
+
+  <!-- body -->
+  <path d="M 150 210 C 148 158 282 156 284 208 C 290 262 296 330 298 386 C 299 412 133 414 136 388 C 139 330 146 262 150 210 Z"
+        fill="#f0e0c0" stroke="#11121a" stroke-width="3.5"/>
+
+  <!-- left arm, pointing at whoever wrote it -->
+  <path d="M 154 290 C 130 284 106 274 86 264 L 92 248 C 112 256 136 266 156 272 Z" fill="#414868" stroke="#11121a" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="80" cy="254" r="11" fill="#f0e0c0" stroke="#11121a" stroke-width="2.5"/>
+  <path d="M 72 248 C 62 245 50 242 42 240 C 39 244 40 248 43 250 C 51 252 62 254 71 257 Z" fill="#f0e0c0" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- right arm, spinning the wheel -->
+  <path d="M 280 288 C 300 278 316 264 328 250 L 316 236 C 304 250 290 262 274 272 Z" fill="#414868" stroke="#11121a" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="328" cy="242" r="10" fill="#f0e0c0" stroke="#11121a" stroke-width="2.5"/>
+  <path d="M 334 238 L 350 224" stroke="#11121a" stroke-width="5" stroke-linecap="round"/>
+
+  <g class="fx spin"><!-- the wheel: green is a hit, black is a miss, and one segment is a line you wrote yourself -->
+  <circle cx="372" cy="208" r="42" fill="#16161e" stroke="#11121a" stroke-width="3"/>
+  <path d="M 372 208 L 412 208 A 40 40 0 0 1 400.28 236.28 Z" fill="#16161e"/>
+  <path d="M 372 208 L 400.28 236.28 A 40 40 0 0 1 372 248 Z" fill="#9ece6a"/>
+  <path d="M 372 208 L 372 248 A 40 40 0 0 1 343.72 236.28 Z" fill="#16161e"/>
+  <path d="M 372 208 L 343.72 236.28 A 40 40 0 0 1 332 208 Z" fill="#9ece6a"/>
+  <path d="M 372 208 L 332 208 A 40 40 0 0 1 343.72 179.72 Z" fill="#16161e"/>
+  <path d="M 372 208 L 343.72 179.72 A 40 40 0 0 1 372 168 Z" fill="#9ece6a"/>
+  <path d="M 372 208 L 372 168 A 40 40 0 0 1 400.28 179.72 Z" fill="#f7768e"/>
+  <path d="M 372 208 L 400.28 179.72 A 40 40 0 0 1 412 208 Z" fill="#16161e"/>
+  <circle cx="372" cy="208" r="42" fill="none" stroke="#11121a" stroke-width="3.5"/>
+  <circle cx="372" cy="208" r="40" fill="none" stroke="#11121a" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- the segment nobody wants -->
+  <circle cx="384" cy="186" r="6.5" fill="#ece3cf" stroke="#11121a" stroke-width="1.5"/>
+  <circle cx="381.6" cy="185" r="1.6" fill="#11121a"/>
+  <circle cx="386.4" cy="185" r="1.6" fill="#11121a"/>
+  <path d="M 381 191 L 387 191" stroke="#11121a" stroke-width="1.6" stroke-linecap="round"/>
+
+  <circle cx="372" cy="208" r="11" fill="#e0af68" stroke="#11121a" stroke-width="2.5"/>
+  <circle cx="388.5" cy="236.6" r="5" fill="#ece3cf" stroke="#11121a" stroke-width="2"/>
+  </g>
+  <path d="M 406 166 L 420 152 M 416 182 L 432 176 M 410 148 L 416 136" stroke="#e0af68" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- waistcoat -->
+  <path d="M 141 284 C 190 266 246 266 293 282 L 298 388 C 299 412 133 414 136 388 Z" fill="#414868" stroke="#11121a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M 202 272 L 217 306 L 232 272 L 225 269 L 217 292 L 209 269 Z" fill="#ece3cf" stroke="#11121a" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M 178 272 L 212 280 L 192 320 Z" fill="#333a54" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 256 270 L 222 280 L 244 318 Z" fill="#333a54" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 251 330 L 287 327 L 288 345 L 252 348 Z" fill="#333a54" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="217" cy="322" r="3.5" fill="#e0af68"/>
+  <circle cx="217" cy="344" r="3.5" fill="#e0af68"/>
+  <circle cx="217" cy="366" r="3.5" fill="#e0af68"/>
+
+  <!-- bow tie -->
+  <path d="M 217 280 L 195 269 L 195 291 Z" fill="#f7768e" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 217 280 L 239 269 L 239 291 Z" fill="#f7768e" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <rect x="211" y="274" width="12" height="12" rx="3" fill="#e0af68" stroke="#11121a" stroke-width="2"/>
+
+  <!-- flat, tidy dealer's hair -->
+  <path d="M 152 190 C 150 158 180 142 217 141 C 256 140 285 158 283 190 C 280 172 268 164 250 166 C 236 154 210 152 196 164 C 176 162 160 172 152 190 Z"
+        fill="#16161e" stroke="#11121a" stroke-width="2"/>
+  <path d="M 192 154 C 207 149 227 148 242 152" fill="none" stroke="#414868" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- the visor, pushed up, because it has been a long shift -->
+  <path d="M 156 182 C 180 168 256 167 280 181 L 278 194 C 254 182 182 183 158 195 Z" fill="#414868" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 158 191 C 186 181 250 180 278 190 C 276 203 250 209 218 209 C 186 209 160 203 158 191 Z" fill="#9ece6a" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M 174 194 C 200 189 240 189 262 194" fill="none" stroke="#8ab85e" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- deadpan face -->
+  <path d="M 176 218 Q 191 213 206 217" fill="none" stroke="#11121a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 232 216 Q 247 211 262 215" fill="none" stroke="#11121a" stroke-width="4" stroke-linecap="round"/>
+  <g class="fx blink b-late"><circle cx="187" cy="232" r="6" fill="#11121a"/>
+  <circle cx="248" cy="230" r="6" fill="#11121a"/></g>
+  <path d="M 179 227 L 195 226" stroke="#11121a" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 240 225 L 256 224" stroke="#11121a" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 201 252 Q 218 248 236 252" fill="none" stroke="#11121a" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- the chips somebody is about to lose -->
+  <ellipse cx="78" cy="396" rx="26" ry="9" fill="#f7768e" stroke="#11121a" stroke-width="2.5"/>
+  <ellipse cx="78" cy="384" rx="26" ry="9" fill="#7aa2f7" stroke="#11121a" stroke-width="2.5"/>
+  <ellipse cx="78" cy="372" rx="26" ry="9" fill="#e0af68" stroke="#11121a" stroke-width="2.5"/>
+  <ellipse cx="78" cy="372" rx="15" ry="4.5" fill="none" stroke="#11121a" stroke-width="1.8" opacity="0.45"/>
+
+  </g></g>
+
+  <!-- sparkles -->
+  <g fill="#e0af68">
+    <path class="star" d="M 420 132 l 2 6 l 6 2 l -6 2 l -2 6 l -2 -6 l -6 -2 l 6 -2 Z" style="animation-delay:.4s"/>
+    <path class="star" d="M 778 150 l 1.5 4.5 l 4.5 1.5 l -4.5 1.5 l -1.5 4.5 l -1.5 -4.5 l -4.5 -1.5 l 4.5 -1.5 Z" style="animation-delay:1.6s"/>
   </g>
 
-  <!-- HEAD: sparks + beating node -->
-  <g class="fx burst" stroke-width="2" stroke-linecap="round">
-    <path d="M770 136 V128" stroke="#39c5cf"/><path d="M770 164 V172" stroke="#39c5cf"/>
-    <path d="M756 150 H748" stroke="#a371f7"/><path d="M784 150 H792" stroke="#a371f7"/>
-    <path d="M760 140 L754 134" stroke="#f778ba"/><path d="M780 160 L786 166" stroke="#f778ba"/>
-    <path d="M780 140 L786 134" stroke="#e3b341"/><path d="M760 160 L754 166" stroke="#e3b341"/>
+  <!-- the conversation -->
+  <g class="fx b b1">
+    <rect x="393.4" y="52" width="153.2" height="36" rx="16" fill="#ece3cf" stroke="#11121a" stroke-width="2.5"/>
+    <path d="M 478 86 L 488 104 L 494 86" fill="#ece3cf" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M 480 86 H 492" stroke="#ece3cf" stroke-width="4"/>
+    <text x="470" y="76" text-anchor="middle" font-family="'Comic Sans MS','Chalkboard SE','Comic Neue','Segoe Print',cursive" font-size="15" font-weight="700" fill="#1a1b26">who wrote this?!</text>
   </g>
-  <circle cx="770" cy="150" r="11" fill="#39c5cf" filter="url(#soft)" opacity=".7"/>
-  <circle class="fx head" cx="770" cy="150" r="6.5" fill="#39c5cf"/>
-  <rect x="749" y="178" width="42" height="18" rx="9" fill="#39c5cf" fill-opacity=".12" stroke="#39c5cf" stroke-opacity=".5"/>
-  <text class="mono" x="770" y="191" text-anchor="middle" font-size="11" fill="#39c5cf">main</text>
+  <g class="fx b b2">
+    <rect x="623.4" y="52" width="153.2" height="36" rx="16" fill="#ece3cf" stroke="#11121a" stroke-width="2.5"/>
+    <path d="M 682 86 L 692 104 L 698 86" fill="#ece3cf" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M 684 86 H 696" stroke="#ece3cf" stroke-width="4"/>
+    <text x="700" y="76" text-anchor="middle" font-family="'Comic Sans MS','Chalkboard SE','Comic Neue','Segoe Print',cursive" font-size="15" font-weight="700" fill="#1a1b26">place your bets.</text>
+  </g>
+  <g class="fx b b3">
+    <rect x="389.3" y="52" width="161.4" height="36" rx="16" fill="#ece3cf" stroke="#11121a" stroke-width="2.5"/>
+    <path d="M 478 86 L 488 104 L 494 86" fill="#ece3cf" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M 480 86 H 492" stroke="#ece3cf" stroke-width="4"/>
+    <text x="470" y="76" text-anchor="middle" font-family="'Comic Sans MS','Chalkboard SE','Comic Neue','Segoe Print',cursive" font-size="15" font-weight="700" fill="#1a1b26">telling everyone.</text>
+  </g>
+  <g class="fx b b4">
+    <rect x="631.6" y="52" width="136.8" height="36" rx="16" fill="#ece3cf" stroke="#11121a" stroke-width="2.5"/>
+    <path d="M 682 86 L 692 104 L 698 86" fill="#ece3cf" stroke="#11121a" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M 684 86 H 696" stroke="#ece3cf" stroke-width="4"/>
+    <text x="700" y="76" text-anchor="middle" font-family="'Comic Sans MS','Chalkboard SE','Comic Neue','Segoe Print',cursive" font-size="15" font-weight="700" fill="#1a1b26">...it was you.</text>
+  </g>
 </svg>
