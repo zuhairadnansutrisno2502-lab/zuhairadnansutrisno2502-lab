@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="900" height="240" role="img" aria-labelledby="t">
+  <title id="t">Xianying — hobby developer from Indonesia building CLI tools and Roblox games</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f1a"/>
+      <stop offset="1" stop-color="#1a1030"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset=".5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#ffffff" stroke-opacity=".04"/>
+    </pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .border { stroke-dasharray: 260 1970; animation: run 6s linear infinite; }
+    .halo { animation: pulse 3s ease-in-out infinite; }
+    .star { animation: twinkle 4s ease-in-out infinite; }
+    .line { opacity: 0; animation: cycle 12s infinite; }
+    .l2 { animation-delay: 4s; } .l3 { animation-delay: 8s; }
+    .caret { animation: blink 1s steps(1) infinite; }
+    .dot { animation: pulse 2s ease-in-out infinite; }
+    @keyframes run { to { stroke-dashoffset: -2230; } }
+    @keyframes pulse { 50% { opacity: .35; } }
+    @keyframes twinkle { 0%, 100% { opacity: .15; } 50% { opacity: .9; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes cycle { 0% { opacity: 0; transform: translateY(8px); } 6%, 30% { opacity: 1; transform: none; } 36%, 100% { opacity: 0; transform: translateY(-8px); } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .line.l1 { opacity: 1; }
+    }
+  </style>
+
+  <rect x="2" y="2" width="896" height="236" rx="18" fill="url(#bg)"/>
+  <rect x="2" y="2" width="896" height="236" rx="18" fill="url(#grid)"/>
+  <rect x="2" y="2" width="896" height="236" rx="18" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="2"/>
+  <!-- light running around the frame -->
+  <rect class="border" x="2" y="2" width="896" height="236" rx="18" fill="none" stroke="url(#neon)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- terminal window dots -->
+  <circle cx="30" cy="28" r="6" fill="#ff5f57"/>
+  <circle cx="50" cy="28" r="6" fill="#febc2e"/>
+  <circle cx="70" cy="28" r="6" fill="#28c840"/>
+
+  <!-- twinkles -->
+  <g fill="#ffffff">
+    <circle class="star" cx="120" cy="70" r="1.6"/>
+    <circle class="star" cx="780" cy="52" r="1.8" style="animation-delay:1s"/>
+    <circle class="star" cx="835" cy="175" r="1.4" style="animation-delay:2s"/>
+    <circle class="star" cx="70" cy="190" r="1.5" style="animation-delay:3s"/>
+    <circle class="star" cx="690" cy="205" r="1.2" style="animation-delay:1.5s"/>
+    <circle class="star" cx="215" cy="200" r="1.3" style="animation-delay:2.5s"/>
+  </g>
+
+  <!-- name with pulsing neon glow -->
+  <text class="sans halo" x="450" y="118" text-anchor="middle" font-size="68" font-weight="800" fill="url(#neon)" filter="url(#glow)">Xianying</text>
+  <text class="sans" x="450" y="118" text-anchor="middle" font-size="68" font-weight="800" fill="url(#neon)">Xianying</text>
+
+  <!-- rotating terminal tagline -->
+  <g class="mono" font-size="20" text-anchor="middle">
+    <text class="line l1" x="450" y="168"><tspan fill="#28c840">$</tspan><tspan fill="#c9d1d9"> npx git-sorry</tspan><tspan fill="#8b949e">  # blame, with feelings</tspan></text>
+    <text class="line l2" x="450" y="168"><tspan fill="#28c840">$</tspan><tspan fill="#c9d1d9"> building Roblox games in Luau</tspan></text>
+    <text class="line l3" x="450" y="168"><tspan fill="#28c840">$</tspan><tspan fill="#c9d1d9"> shipping tiny tools, one weekend at a time</tspan></text>
+  </g>
+
+  <!-- status pill -->
+  <g class="mono" font-size="14">
+    <rect x="352" y="192" width="196" height="28" rx="14" fill="#ffffff" fill-opacity=".06"/>
+    <circle class="dot" cx="372" cy="206" r="5" fill="#28c840"/>
+    <text x="386" y="211" fill="#c9d1d9">online · Indonesia<tspan class="caret" fill="#a78bfa">_</tspan></text>
+  </g>
+</svg>
