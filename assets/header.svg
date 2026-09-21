@@ -42,6 +42,22 @@
     @keyframes b4 { 0%, 75% { opacity: 0; transform: scale(.5); } 78%, 95% { opacity: 1; transform: scale(1); } 98%, 100% { opacity: 0; transform: scale(.9); } }
     @keyframes hl { 50% { opacity: .25; } }
     @keyframes steam { 0% { opacity: 0; transform: translateY(4px); } 30% { opacity: .8; } 100% { opacity: 0; transform: translateY(-14px); } }
+    .bulb { animation: bulb 1.4s ease-in-out infinite alternate; }
+    .token { opacity: 0; animation: float linear infinite; }
+    .neon { animation: flicker 6s infinite; }
+    .tail { transform-origin: 601px 186px; animation: tail 1.6s ease-in-out infinite alternate; }
+    .breath { transform-box: fill-box; transform-origin: 50% 100%; animation: breath 2.8s ease-in-out infinite; }
+    .zz { opacity: 0; animation: zz 3s ease-out infinite; }
+    .sway { transform-origin: 359px 244px; animation: sway 3.4s ease-in-out infinite alternate; }
+    .duck { transform-origin: 392px 264px; animation: duck 5s ease-in-out infinite; }
+    @keyframes bulb { from { opacity: .3; } to { opacity: 1; } }
+    @keyframes float { 0% { opacity: 0; transform: translateY(0); } 15% { opacity: .5; } 80% { opacity: .3; } 100% { opacity: 0; transform: translateY(-170px); } }
+    @keyframes flicker { 0%, 17%, 21%, 70%, 72%, 100% { opacity: 1; } 19%, 71% { opacity: .25; } }
+    @keyframes tail { from { transform: rotate(-16deg); } to { transform: rotate(12deg); } }
+    @keyframes breath { 50% { transform: scaleY(1.1); } }
+    @keyframes zz { 0% { opacity: 0; transform: translate(0, 0); } 25% { opacity: .9; } 100% { opacity: 0; transform: translate(-12px, -26px); } }
+    @keyframes sway { from { transform: rotate(-6deg); } to { transform: rotate(6deg); } }
+    @keyframes duck { 0%, 82%, 100% { transform: rotate(0); } 86% { transform: rotate(-14deg); } 91% { transform: rotate(9deg); } }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .b1 { opacity: 1; } .shine { opacity: 0; } }
   </style>
 
@@ -62,12 +78,69 @@
   </g>
   <rect x=".5" y=".5" width="799" height="279" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity=".08"/>
 
+  <!-- fairy lights -->
+  <path d="M 385 6 Q 590 58 795 6" fill="none" stroke="#414868" stroke-width="1.5"/>
+  <g class="bulb" style="animation-delay:0.00s"><circle cx="401.4" cy="19.0" r="8" fill="#f7768e" opacity=".55" filter="url(#soft)"/><ellipse cx="401.4" cy="18.0" rx="3.4" ry="4.6" fill="#f7768e" stroke="#11121a" stroke-width="1.2"/></g><rect x="399.4" y="11.0" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.45s"><circle cx="435.7" cy="26.3" r="8" fill="#e0af68" opacity=".55" filter="url(#soft)"/><ellipse cx="435.7" cy="25.3" rx="3.4" ry="4.6" fill="#e0af68" stroke="#11121a" stroke-width="1.2"/></g><rect x="433.7" y="18.3" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.90s"><circle cx="470.0" cy="32.1" r="8" fill="#9ece6a" opacity=".55" filter="url(#soft)"/><ellipse cx="470.0" cy="31.1" rx="3.4" ry="4.6" fill="#9ece6a" stroke="#11121a" stroke-width="1.2"/></g><rect x="468.0" y="24.1" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.00s"><circle cx="504.3" cy="36.5" r="8" fill="#7aa2f7" opacity=".55" filter="url(#soft)"/><ellipse cx="504.3" cy="35.5" rx="3.4" ry="4.6" fill="#7aa2f7" stroke="#11121a" stroke-width="1.2"/></g><rect x="502.3" y="28.5" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.45s"><circle cx="538.6" cy="39.4" r="8" fill="#bb9af7" opacity=".55" filter="url(#soft)"/><ellipse cx="538.6" cy="38.4" rx="3.4" ry="4.6" fill="#bb9af7" stroke="#11121a" stroke-width="1.2"/></g><rect x="536.6" y="31.4" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.90s"><circle cx="572.9" cy="40.8" r="8" fill="#f7768e" opacity=".55" filter="url(#soft)"/><ellipse cx="572.9" cy="39.8" rx="3.4" ry="4.6" fill="#f7768e" stroke="#11121a" stroke-width="1.2"/></g><rect x="570.9" y="32.8" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.00s"><circle cx="607.1" cy="40.8" r="8" fill="#e0af68" opacity=".55" filter="url(#soft)"/><ellipse cx="607.1" cy="39.8" rx="3.4" ry="4.6" fill="#e0af68" stroke="#11121a" stroke-width="1.2"/></g><rect x="605.1" y="32.8" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.45s"><circle cx="641.4" cy="39.4" r="8" fill="#9ece6a" opacity=".55" filter="url(#soft)"/><ellipse cx="641.4" cy="38.4" rx="3.4" ry="4.6" fill="#9ece6a" stroke="#11121a" stroke-width="1.2"/></g><rect x="639.4" y="31.4" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.90s"><circle cx="675.7" cy="36.5" r="8" fill="#7aa2f7" opacity=".55" filter="url(#soft)"/><ellipse cx="675.7" cy="35.5" rx="3.4" ry="4.6" fill="#7aa2f7" stroke="#11121a" stroke-width="1.2"/></g><rect x="673.7" y="28.5" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.00s"><circle cx="710.0" cy="32.1" r="8" fill="#bb9af7" opacity=".55" filter="url(#soft)"/><ellipse cx="710.0" cy="31.1" rx="3.4" ry="4.6" fill="#bb9af7" stroke="#11121a" stroke-width="1.2"/></g><rect x="708.0" y="24.1" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.45s"><circle cx="744.3" cy="26.3" r="8" fill="#f7768e" opacity=".55" filter="url(#soft)"/><ellipse cx="744.3" cy="25.3" rx="3.4" ry="4.6" fill="#f7768e" stroke="#11121a" stroke-width="1.2"/></g><rect x="742.3" y="18.3" width="4" height="3" fill="#565f89"/>
+  <g class="bulb" style="animation-delay:0.90s"><circle cx="778.6" cy="19.0" r="8" fill="#e0af68" opacity=".55" filter="url(#soft)"/><ellipse cx="778.6" cy="18.0" rx="3.4" ry="4.6" fill="#e0af68" stroke="#11121a" stroke-width="1.2"/></g><rect x="776.6" y="11.0" width="4" height="3" fill="#565f89"/>
+
+  <!-- code drifting up the wall -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">
+    <text class="token" x="404" y="258" fill="#7aa2f7" style="animation-duration:13s;animation-delay:0s">git blame</text>
+    <text class="token" x="765" y="258" fill="#bb9af7" style="animation-duration:11s;animation-delay:2s">{ }</text>
+    <text class="token" x="750" y="258" fill="#9ece6a" style="animation-duration:12s;animation-delay:5s">rebase</text>
+    <text class="token" x="528" y="258" fill="#e0af68" style="animation-duration:14s;animation-delay:7s">// TODO</text>
+    <text class="token" x="470" y="258" fill="#73daca" style="animation-duration:10s;animation-delay:3.5s">npx</text>
+    <text class="token" x="648" y="258" fill="#f7768e" style="animation-duration:12s;animation-delay:9s">===</text>
+    <text class="token" x="560" y="258" fill="#7aa2f7" style="animation-duration:15s;animation-delay:11s">fix: typo</text>
+    <text class="token" x="425" y="258" fill="#f7768e" style="animation-duration:14s;animation-delay:6.5s">git push -f</text>
+    <text class="token" x="740" y="258" fill="#9ece6a" style="animation-duration:13s;animation-delay:4s">0 errors</text>
+  </g>
+
+  <!-- neon sign -->
+  <g class="neon" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700" text-anchor="middle">
+    <text x="590" y="146" fill="#f778ba" filter="url(#soft)">&lt;/&gt;</text>
+    <text x="590" y="146" fill="#ffd1e8" stroke="#f778ba" stroke-width="1">&lt;/&gt;</text>
+  </g>
+
   <!-- text -->
   <text class="sans" x="48" y="86" font-size="13" font-weight="600" letter-spacing="2.5" fill="#7d8590">HOBBY DEVELOPER  ·  OPEN SOURCE</text>
   <text class="sans" x="45" y="152" font-size="64" font-weight="700" letter-spacing="-1.5" fill="#f0f6fc">Xianying</text>
   <g clip-path="url(#name)"><rect class="shine" x="45" y="90" width="200" height="80" fill="url(#shine)" opacity=".9"/></g>
   <text class="sans" x="48" y="198" font-size="22" fill="#9da7b3">Small CLI tools around <tspan fill="#e6edf3">git</tspan>,</text>
   <text class="sans" x="48" y="229" font-size="22" fill="#9da7b3">and Roblox games in <tspan fill="#e6edf3">Luau</tspan>.</text>
+
+  <!-- rug, plant, rubber duck, a crumpled first draft -->
+  <ellipse cx="585" cy="262" rx="205" ry="11" fill="#1f2335" stroke="#414868" stroke-width="1.5"/>
+  <ellipse cx="585" cy="262" rx="190" ry="7" fill="none" stroke="#bb9af7" stroke-opacity=".35" stroke-dasharray="6 5"/>
+  <g class="sway" stroke="#11121a" stroke-width="1.8" stroke-linejoin="round">
+    <path d="M 359 243 C 350 230 340 226 333 213 C 346 213 356 224 359 243 Z" fill="#9ece6a"/>
+    <path d="M 359 243 C 360 226 367 214 377 206 C 379 220 369 232 359 243 Z" fill="#9ece6a"/>
+    <path d="M 359 243 C 355 228 355 213 360 199 C 366 213 364 229 359 243 Z" fill="#73daca"/>
+  </g>
+  <g stroke="#11121a" stroke-width="2" stroke-linejoin="round">
+    <path d="M 347 247 H 371 L 367 264 H 351 Z" fill="#db7c5a"/>
+    <rect x="344" y="242" width="30" height="6" rx="2" fill="#e8916e"/>
+  </g>
+  <g class="duck" stroke="#11121a" stroke-width="1.8" stroke-linejoin="round">
+    <path d="M 381 257 C 381 250 392 250 395 253 C 399 249 404 251 404 256 C 404 263 398 265 391 265 C 384 265 381 262 381 257 Z" fill="#fadb6b"/>
+    <circle cx="386" cy="248" r="6" fill="#fadb6b"/>
+    <path d="M 380 248 L 374 250 L 380 252 Z" fill="#ff9e64"/>
+    <circle cx="385" cy="246.5" r="1.3" fill="#11121a" stroke="none"/>
+  </g>
+  <g stroke="#11121a" stroke-width="1.5" fill="none">
+    <circle cx="524" cy="259" r="5.5" fill="#ece3cf"/>
+    <path d="M 520 257 L 524 260 L 528 256 M 523 263 L 525 260"/>
+  </g>
 
   <!-- the desk they share -->
   <g stroke="#11121a" stroke-linejoin="round">
@@ -93,6 +166,27 @@
   <g stroke="#c0caf5" stroke-width="1.8" fill="none" stroke-linecap="round">
     <path class="steam" d="M 541 219 q -3 -4 0 -8"/>
     <path class="steam" d="M 546 219 q 3 -4 0 -8" style="animation-delay:1.2s"/>
+  </g>
+
+  <!-- the cat that sleeps on every laptop -->
+  <g stroke="#11121a" stroke-linecap="round" fill="none">
+    <g class="tail"><path d="M 601 186 C 611 189 613 199 607 209" stroke-width="8"/><path d="M 601 186 C 611 189 613 199 607 209" stroke="#e0af68" stroke-width="5"/></g>
+  </g>
+  <g stroke="#11121a" stroke-width="2" stroke-linejoin="round">
+    <ellipse class="breath" cx="585" cy="182" rx="19" ry="9" fill="#e0af68"/>
+    <path d="M 580 175 q 3 4 0 8 M 588 174 q 3 4 0 8 M 596 176 q 2 4 0 7" fill="none" stroke="#b07d3a" stroke-width="1.8"/>
+    <ellipse cx="574" cy="190" rx="4" ry="2.5" fill="#f0c890"/>
+    <ellipse cx="583" cy="190.5" rx="4" ry="2.5" fill="#f0c890"/>
+    <path d="M 559 173 L 561 163 L 567 170 Z" fill="#e0af68"/>
+    <path d="M 569 169 L 574 162 L 576 172 Z" fill="#e0af68"/>
+    <circle cx="567" cy="178" r="8.5" fill="#e0af68"/>
+    <path d="M 562 178 q 2 2 4 0 M 569 177.5 q 2 2 4 0" fill="none" stroke-width="1.5"/>
+    <path d="M 566.5 181 l 1.5 1.2 l 1.5 -1.2" fill="none" stroke-width="1.2"/>
+  </g>
+  <g font-family="'Comic Sans MS','Chalkboard SE','Comic Neue',cursive" font-weight="700" fill="#c0caf5">
+    <text class="zz" x="556" y="168" font-size="9">z</text>
+    <text class="zz" x="550" y="160" font-size="12" style="animation-delay:1s">z</text>
+    <text class="zz" x="543" y="150" font-size="15" style="animation-delay:2s">Z</text>
   </g>
 
   <!-- Snitchy (git-sorry) -->
