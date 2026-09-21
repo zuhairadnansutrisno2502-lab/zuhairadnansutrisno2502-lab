@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-labelledby="t">
+  <title id="t">notmymachine — Runs the tests you already have in other timezones and locales. Run it with npx notmymachine.</title>
+  <defs>
+    <clipPath id="clip"><rect width="800" height="200" rx="14"/></clipPath>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(40 0) scale(420 230)">
+      <stop offset="0" stop-color="#39c5cf" stop-opacity=".16"/><stop offset="1" stop-color="#39c5cf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" x2="1">
+      <stop offset="0" stop-color="#39c5cf" stop-opacity="0"/><stop offset=".5" stop-color="#39c5cf"/><stop offset="1" stop-color="#39c5cf" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; white-space: pre; }
+    .sweep { animation: sweep 7s ease-in-out 4.6s infinite; transform: translateX(-260px); }
+    .o { opacity: 0; animation: 9s 4.6s infinite; }
+    .o1 { animation-name: o1; } .o2 { animation-name: o2; } .o3 { animation-name: o3; } .o4 { animation-name: o4; }
+    @keyframes sweep { 0% { transform: translateX(-260px); } 55%, 100% { transform: translateX(820px); } }
+    @keyframes o1 { 0%, 8% { opacity: 0; } 11%, 88% { opacity: 1; } 92%, 100% { opacity: 0; } }
+    @keyframes o2 { 0%, 18% { opacity: 0; } 21%, 88% { opacity: 1; } 92%, 100% { opacity: 0; } }
+    @keyframes o3 { 0%, 28% { opacity: 0; } 31%, 88% { opacity: 1; } 92%, 100% { opacity: 0; } }
+    @keyframes o4 { 0%, 38% { opacity: 0; } 41%, 88% { opacity: 1; } 92%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .o { opacity: 1; } .sweep { opacity: 0; } }
+  </style>
+
+  <g clip-path="url(#clip)">
+    <rect width="800" height="200" fill="#0d1117"/>
+    <rect width="800" height="200" fill="url(#glow)"/>
+    <rect class="sweep" width="260" height="2" fill="url(#sweep)"/>
+  </g>
+  <rect x=".5" y=".5" width="799" height="199" rx="13.5" fill="none" stroke="#30363d"/>
+
+  <text class="sans" x="32" y="46" font-size="12" font-weight="600" letter-spacing="2" fill="#39c5cf" xml:space="preserve">TESTING  ·  NODE.JS</text>
+  <text class="sans" x="31" y="88" font-size="32" font-weight="700" letter-spacing="-.5" fill="#f0f6fc">notmymachine</text>
+  <text class="sans" x="32" y="122" font-size="18" fill="#9da7b3">Runs the tests you already have</text>
+  <text class="sans" x="32" y="146" font-size="18" fill="#9da7b3">in other timezones and locales.</text>
+  <text class="sans" x="32" y="176" font-size="14" font-weight="600" fill="#39c5cf">View repository →</text>
+
+  <rect x="424.5" y="20.5" width="355" height="159" rx="10" fill="#010409" stroke="#21262d"/>
+  <g fill="#30363d"><circle cx="443" cy="39" r="4"/><circle cx="457" cy="39" r="4"/><circle cx="471" cy="39" r="4"/></g>
+  <text class="mono" x="444" y="71"><tspan fill="#39c5cf">$ </tspan><tspan fill="#e6edf3">npx notmymachine</tspan></text>
+  <text class="mono o o1" x="444" y="92" xml:space="preserve"><tspan fill="#f85149">BREAK  </tspan><tspan fill="#e6edf3">UTC+14 Pacific/Kiritimati</tspan></text>
+  <text class="mono o o2" x="444" y="113" xml:space="preserve"><tspan fill="#f85149">BREAK  </tspan><tspan fill="#e6edf3">German locale, 1.234,5</tspan></text>
+  <text class="mono o o3" x="444" y="134" xml:space="preserve"><tspan fill="#3fb950">pass   </tspan><tspan fill="#9da7b3">UTC+5:45 Asia/Kathmandu</tspan></text>
+  <text class="mono o o4" x="444" y="155" xml:space="preserve"><tspan fill="#39c5cf">3 of 10 worlds break this suite.</tspan></text>
+  
+</svg>
