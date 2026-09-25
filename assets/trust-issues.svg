@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-labelledby="t">
+  <title id="t">trust-issues — your coding agent says it's done. Make it prove it. Run it with npx trust-issues.</title>
+  <defs>
+    <clipPath id="clip"><rect width="800" height="200" rx="14"/></clipPath>
+    <clipPath id="cmdline"><rect x="460.9" y="54" width="315.1" height="26"/></clipPath>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(40 0) scale(440 240)">
+      <stop offset="0" stop-color="#a371f7" stop-opacity=".22"/><stop offset="1" stop-color="#a371f7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bloom" x="-5%" y="-10%" width="110%" height="120%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; white-space: pre; }
+    .edge { fill: none; stroke: #a371f7; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 20 80; animation: edge 6s linear 1.7s infinite; }
+    .edge.soft { stroke-width: 6; }
+    .breathe { animation: breathe 4s ease-in-out 1.7s infinite; }
+    .ember { fill: #a371f7; opacity: 0; animation: rise linear infinite; }
+    .type { animation: type 10s 1.7s infinite; }
+    .cursor { animation: blink .8s steps(1) infinite; }
+    .o { opacity: 0; animation: 10s ease-out 1.7s infinite; }
+    .o1 { animation-name: o1; } .o2 { animation-name: o2; } .o3 { animation-name: o3; } .o4 { animation-name: o4; }
+    .nudge { animation: nudge 1.6s ease-in-out infinite; }
+    @keyframes edge { to { stroke-dashoffset: -100; } }
+    @keyframes breathe { 50% { opacity: .5; } }
+    @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .8; } 100% { transform: translateY(-150px); opacity: 0; } }
+    @keyframes type { 0% { transform: translateX(0); animation-timing-function: steps(16, end); } 14%, 100% { transform: translateX(134.9px); } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes nudge { 50% { transform: translateX(4px); } }
+    @keyframes o1 { 0%, 17% { opacity: 0; transform: translateX(-10px); } 21%, 90% { opacity: 1; transform: none; } 95%, 100% { opacity: 0; } }
+    @keyframes o2 { 0%, 23% { opacity: 0; transform: translateX(-10px); } 27%, 90% { opacity: 1; transform: none; } 95%, 100% { opacity: 0; } }
+    @keyframes o3 { 0%, 29% { opacity: 0; transform: translateX(-10px); } 33%, 90% { opacity: 1; transform: none; } 95%, 100% { opacity: 0; } }
+    @keyframes o4 { 0%, 35% { opacity: 0; transform: translateX(-10px); } 39%, 90% { opacity: 1; transform: none; } 95%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .o { opacity: 1; } .type { transform: translateX(134.9px); } .edge, .ember { opacity: 0; } }
+  </style>
+
+  <g clip-path="url(#clip)">
+    <rect width="800" height="200" fill="#0d1117"/>
+    <rect class="breathe" width="800" height="200" fill="url(#glow)"/>
+    <circle class="ember" cx="72" cy="196" r="1.4" style="animation-duration:6.5s;animation-delay:.4s"/>
+    <circle class="ember" cx="142" cy="196" r="1.9" style="animation-duration:7.5s;animation-delay:2.6s"/>
+    <circle class="ember" cx="216" cy="196" r="2.4" style="animation-duration:5.5s;animation-delay:4.4s"/>
+    <circle class="ember" cx="284" cy="196" r="1.4" style="animation-duration:8s;animation-delay:1.3s"/>
+    <circle class="ember" cx="344" cy="196" r="1.9" style="animation-duration:6.5s;animation-delay:3.6s"/>
+    <circle class="ember" cx="398" cy="196" r="2.4" style="animation-duration:7s;animation-delay:5.4s"/>
+    <circle class="ember" cx="182" cy="196" r="1.4" style="animation-duration:9s;animation-delay:6.2s"/>
+  </g>
+  <rect x=".5" y=".5" width="799" height="199" rx="13.5" fill="none" stroke="#30363d"/>
+  <rect class="edge soft" x=".5" y=".5" width="799" height="199" rx="13.5" pathLength="100" filter="url(#bloom)"/>
+  <rect class="edge" x=".5" y=".5" width="799" height="199" rx="13.5" pathLength="100"/>
+
+  <text class="sans" x="32" y="46" font-size="12" font-weight="600" letter-spacing="2" fill="#a371f7" xml:space="preserve">AGENT HOOK  ·  SKILL</text>
+  <text class="sans" x="31" y="88" font-size="32" font-weight="700" letter-spacing="-.5" fill="#f0f6fc">trust-issues</text>
+  <text class="sans" x="32" y="122" font-size="18" fill="#9da7b3">Your coding agent says it's done.</text>
+  <text class="sans" x="32" y="146" font-size="18" fill="#9da7b3">Make it prove it.</text>
+  <text class="sans nudge" x="32" y="176" font-size="14" font-weight="600" fill="#a371f7">View repository →</text>
+
+  <rect x="424.5" y="20.5" width="355" height="159" rx="10" fill="#010409" stroke="#21262d"/>
+  <g fill="#30363d"><circle cx="443" cy="39" r="4"/><circle cx="457" cy="39" r="4"/><circle cx="471" cy="39" r="4"/></g>
+  <text class="mono" x="444" y="71"><tspan fill="#a371f7">$ </tspan><tspan fill="#e6edf3">npx trust-issues</tspan></text>
+  <g clip-path="url(#cmdline)"><g class="type">
+    <rect x="460.9" y="56" width="315.1" height="22" fill="#010409"/>
+    <rect class="cursor" x="461.9" y="59" width="8" height="16" fill="#a371f7"/>
+  </g></g>
+  <text class="mono o o1" x="444" y="92"><tspan fill="#7d8590">"tests pass"   6 claims  6 backed</tspan></text>
+  <text class="mono o o2" x="444" y="113"><tspan fill="#7d8590">"verified"    12 claims 11 backed</tspan></text>
+  <text class="mono o o3" x="444" y="134"><tspan fill="#7d8590">silent tampering    0 times</tspan></text>
+  <text class="mono o o4" x="444" y="155"><tspan fill="#3fb950">grade A</tspan><tspan fill="#9da7b3">  trust issues: unfounded</tspan></text>
+</svg>

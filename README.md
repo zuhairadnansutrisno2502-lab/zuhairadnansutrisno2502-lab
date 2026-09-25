@@ -1,10 +1,23 @@
 <a href="https://github.com/zuhairadnansutrisno2502-lab?tab=repositories"><img src="assets/header.svg" width="100%" alt="Xianying — hobby developer. Small CLI tools around git, and Roblox games in Luau."></a>
 
-I mostly make small command-line tools that poke fun at git — each one runs with a single `npx`, nothing to install. These days most of my spare time goes into Roblox games written in Luau.
+I mostly make small command-line tools that poke fun at git, plus one that keeps my coding agent honest. Each runs with a single `npx`, nothing to install. These days most of my spare time goes into Roblox games written in Luau.
 
 <sub>TypeScript · Node.js · Luau · Roblox Studio · Swift · Python</sub>
 
 ### Selected work
+
+<a href="https://github.com/zuhairadnansutrisno2502-lab/trust-issues"><img src="assets/trust-issues.svg" width="100%" alt="trust-issues — your coding agent says it's done. Make it prove it."></a>
+
+<details>
+<summary>Watch it catch one</summary>
+<br>
+<img src="https://raw.githubusercontent.com/zuhairadnansutrisno2502-lab/trust-issues/main/docs/demo.gif" width="100%" alt="an agent skips a failing test, says all tests pass, and the hook sends it back to run them">
+
+```bash
+npx trust-issues
+```
+
+</details>
 
 <a href="https://github.com/zuhairadnansutrisno2502-lab/git-sorry"><img src="assets/git-sorry.svg" width="100%" alt="git-sorry — git blame tells you who. git-sorry tells them."></a>
 
