@@ -18,13 +18,18 @@ url = "https://panel.raehost.com"
 # Boleh dikosongkan di sini lalu diisi lewat secret PTERO_SERVER_ID.
 server_id = ""
 
+# Server tidak bisa menyala sebelum Minecraft EULA disetujui.
+# Dengan true, Anda menyetujui https://aka.ms/MinecraftEULA
+[eula]
+accept = true
+
 # --------------------------------------------------------------------------
 #  server.properties
 #  Nama kunci persis seperti di file server.properties.
 #  server-ip, server-port, dan query.port diatur oleh panel, jadi diabaikan.
 # --------------------------------------------------------------------------
 [properties]
-motd = "\u00A7aSelamat datang di server kami!"   # \u00A7 + kode = warna
+motd = "\u00A7b\u00A7lMenkrep \u00A77| \u00A7aJava & Bedrock"   # \u00A7 + kode = warna
 max-players = 20
 difficulty = "normal"           # peaceful | easy | normal | hard
 gamemode = "survival"           # survival | creative | adventure | spectator
@@ -36,14 +41,17 @@ simulation-distance = 6
 enable-command-block = false
 white-list = false              # true = hanya pemain di daftar whitelist
 enforce-whitelist = false
+# Wajib false untuk crossplay (Geyser): kalau true, pemain Bedrock tidak bisa chat.
+enforce-secure-profile = false
 # level-seed = ""
 # level-name = "world"
 
 # online-mode = true  -> hanya akun Minecraft resmi (premium) yang bisa masuk.
-# online-mode = false -> launcher non-premium (mis. TLauncher) bisa masuk,
-#                        tapi siapa pun bisa memakai nama pemain mana pun.
-#                        Kalau false, pasang plugin login (mis. AuthMe).
-# online-mode = true
+# online-mode = false -> launcher non-premium (mis. TLauncher) juga bisa masuk.
+#                        Karena siapa pun bisa memakai nama apa pun, plugin
+#                        AuthMe di bawah WAJIB: pemain harus /register lalu
+#                        /login dengan password.
+online-mode = false
 
 # --------------------------------------------------------------------------
 #  Variabel startup di panel (tab "Startup").
@@ -66,15 +74,19 @@ reinstall_after_change = false
 # --------------------------------------------------------------------------
 [plugins]
 # Versi Minecraft untuk memilih versi plugin yang cocok. Kosong = terbaru.
-game_version = ""
+game_version = "26.2"
 loaders = ["paper", "spigot", "bukkit"]
 
-# Contoh (hapus "#" untuk mengaktifkan):
+# Login dengan password, wajib selama online-mode = false.
+[[plugins.install]]
+modrinth = "authmereloaded"
+
+# Contoh lain (hapus "#" untuk mengaktifkan):
 # [[plugins.install]]
-# modrinth = "luckperms"
+# modrinth = "skinsrestorer"      # skin pemain tetap muncul di mode non-premium
 #
 # [[plugins.install]]
-# modrinth = "essentialsx"
+# modrinth = "luckperms"
 #
 # [[plugins.install]]
 # name = "Plugin lain"

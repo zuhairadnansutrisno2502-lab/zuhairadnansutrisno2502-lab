@@ -228,6 +228,25 @@ def apply_properties(panel, settings, dry_run):
     return True
 
 
+def apply_eula(panel, settings, dry_run):
+    if not settings.get("accept"):
+        return False
+    log("\n== EULA ==")
+    try:
+        current = panel.call("GET", "/files/contents", query={"file": "/eula.txt"}, raw=True)
+    except ApiError as error:
+        if error.status != 404:
+            raise
+        current = ""
+    if re.search(r"^\s*eula\s*=\s*true\s*$", current, re.MULTILINE | re.IGNORECASE):
+        log("EULA sudah disetujui.")
+        return False
+    log("Menyetujui Minecraft EULA (https://aka.ms/MinecraftEULA).")
+    if not dry_run:
+        panel.call("POST", "/files/write", query={"file": "/eula.txt"}, text_body="eula=true\n")
+    return True
+
+
 # ---------------------------------------------------------------------------
 # Startup variables
 # ---------------------------------------------------------------------------
@@ -303,7 +322,8 @@ def resolve_plugin(entry, settings):
     """Return (label, download_url, filename)."""
     if "modrinth" in entry:
         slug = entry["modrinth"]
-        query = {"loaders": json.dumps(settings.get("loaders", ["paper", "spigot", "bukkit"]))}
+        loaders = settings.get("loaders", ["paper", "spigot", "bukkit"])
+        query = {"loaders": json.dumps(loaders)}
         if settings.get("game_version"):
             query["game_versions"] = json.dumps([settings["game_version"]])
         url = f"{MODRINTH_API}/project/{urllib.parse.quote(slug)}/version?{urllib.parse.urlencode(query)}"
@@ -318,7 +338,9 @@ def resolve_plugin(entry, settings):
                 raise ValueError(f"'{slug}' tidak mencantumkan versi Minecraft {settings['game_version']} di Modrinth; "
                                  "kosongkan game_version atau pakai url langsung")
             raise ValueError(f"'{slug}' tidak punya versi untuk loader {query['loaders']}")
-        version = next((v for v in versions if v["version_type"] == "release"), versions[0])
+        releases = [v for v in versions if v["version_type"] == "release"] or versions
+        # Newest build for the most preferred loader, e.g. AuthMe's Paper jar over its Spigot jar.
+        version = next((v for loader in loaders for v in releases if loader in v["loaders"]), releases[0])
         file = next((f for f in version["files"] if f["primary"]), version["files"][0])
         return entry.get("name", slug), file["url"], file["filename"]
     if "url" in entry:
@@ -509,7 +531,8 @@ def main():
     was_running = panel.state() in ("running", "starting")
 
     try:
-        changed = apply_properties(panel, config.get("properties", {}), args.dry_run)
+        changed = apply_eula(panel, config.get("eula", {}), args.dry_run)
+        changed = apply_properties(panel, config.get("properties", {}), args.dry_run) or changed
         startup_changed = apply_startup(panel, startup_cfg, args.dry_run)
         changed = install_plugins(panel, config.get("plugins", {}), args.dry_run) or changed
         changed = changed or startup_changed
