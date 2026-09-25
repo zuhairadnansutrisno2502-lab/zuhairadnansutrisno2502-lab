@@ -1,0 +1,44 @@
+name: Konfigurasi server Minecraft
+
+# Jalan otomatis setiap kali minecraft/ berubah di main, atau manual dari tab
+# Actions (centang "dry_run" untuk melihat perubahan tanpa menerapkannya).
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Uji coba saja (tampilkan perubahan, jangan terapkan)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - "minecraft/**"
+      - ".github/workflows/minecraft-config.yml"
+
+concurrency:
+  group: minecraft-config
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Terapkan server-config.toml ke RaeHost
+        env:
+          PTERO_API_KEY: ${{ secrets.PTERO_API_KEY }}
+          PTERO_SERVER_ID: ${{ secrets.PTERO_SERVER_ID }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ -z "$PTERO_API_KEY" ]; then
+            echo "::warning::Secret PTERO_API_KEY belum diisi, konfigurasi dilewati. Lihat minecraft/README.md."
+            exit 0
+          fi
+          args=()
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          python3 minecraft/configure.py "${args[@]}"

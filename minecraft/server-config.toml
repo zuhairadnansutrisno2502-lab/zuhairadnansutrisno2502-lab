@@ -1,0 +1,99 @@
+# ==========================================================================
+#  Konfigurasi server Minecraft RaeHost
+#
+#  Ubah nilai di file ini, lalu jalankan configure.py (atau biarkan GitHub
+#  Actions menjalankannya). Skrip hanya mengubah hal yang ditulis di sini;
+#  pengaturan lain di server Anda dibiarkan apa adanya.
+#
+#  Baris yang diawali "#" adalah komentar dan diabaikan. Hapus "#" di depan
+#  sebuah baris untuk mengaktifkannya.
+#
+#  JANGAN tulis API key di file ini. API key disimpan sebagai secret
+#  PTERO_API_KEY (lihat minecraft/README.md).
+# ==========================================================================
+
+[panel]
+url = "https://panel.raehost.com"
+# ID server = 8 karakter di URL panel, mis. panel.raehost.com/server/1a2b3c4d
+# Boleh dikosongkan di sini lalu diisi lewat secret PTERO_SERVER_ID.
+server_id = ""
+
+# --------------------------------------------------------------------------
+#  server.properties
+#  Nama kunci persis seperti di file server.properties.
+#  server-ip, server-port, dan query.port diatur oleh panel, jadi diabaikan.
+# --------------------------------------------------------------------------
+[properties]
+motd = "\u00A7aSelamat datang di server kami!"   # \u00A7 + kode = warna
+max-players = 20
+difficulty = "normal"           # peaceful | easy | normal | hard
+gamemode = "survival"           # survival | creative | adventure | spectator
+pvp = true
+allow-flight = false            # true kalau pakai mod/plugin terbang
+spawn-protection = 0            # 0 = pemain bisa membangun di dekat spawn
+view-distance = 8               # kecilkan kalau server lag
+simulation-distance = 6
+enable-command-block = false
+white-list = false              # true = hanya pemain di daftar whitelist
+enforce-whitelist = false
+# level-seed = ""
+# level-name = "world"
+
+# online-mode = true  -> hanya akun Minecraft resmi (premium) yang bisa masuk.
+# online-mode = false -> launcher non-premium (mis. TLauncher) bisa masuk,
+#                        tapi siapa pun bisa memakai nama pemain mana pun.
+#                        Kalau false, pasang plugin login (mis. AuthMe).
+# online-mode = true
+
+# --------------------------------------------------------------------------
+#  Variabel startup di panel (tab "Startup").
+#  Nama variabel harus sama dengan "env variable" di panel, mis.
+#  MINECRAFT_VERSION, BUILD_NUMBER, SERVER_JARFILE. Skrip menampilkan daftar
+#  variabel yang tersedia setiap kali dijalankan.
+# --------------------------------------------------------------------------
+[startup]
+# MINECRAFT_VERSION = "1.21.1"
+
+# Mengganti versi Minecraft biasanya perlu "reinstall" agar jar baru
+# diunduh. File dunia tidak dihapus, tapi sebaiknya buat backup dulu.
+reinstall_after_change = false
+
+# --------------------------------------------------------------------------
+#  Plugin (hanya untuk server Paper / Spigot / Purpur).
+#  Tiap plugin diambil dari Modrinth (isi "modrinth" dengan slug proyek,
+#  yaitu bagian akhir URL modrinth.com/plugin/<slug>) atau dari "url" langsung
+#  ke file .jar. Plugin yang sudah ada di folder /plugins tidak diunduh ulang.
+# --------------------------------------------------------------------------
+[plugins]
+# Versi Minecraft untuk memilih versi plugin yang cocok. Kosong = terbaru.
+game_version = ""
+loaders = ["paper", "spigot", "bukkit"]
+
+# Contoh (hapus "#" untuk mengaktifkan):
+# [[plugins.install]]
+# modrinth = "luckperms"
+#
+# [[plugins.install]]
+# modrinth = "essentialsx"
+#
+# [[plugins.install]]
+# name = "Plugin lain"
+# url = "https://contoh.com/plugin.jar"
+
+# --------------------------------------------------------------------------
+#  Perintah konsol, dijalankan setelah server menyala.
+# --------------------------------------------------------------------------
+[console]
+ops = []                        # mis. ["NamaKamu"]
+whitelist = []                  # mis. ["Teman1", "Teman2"]
+commands = [
+  # "gamerule keepInventory true",
+  # "gamerule playersSleepingPercentage 50",
+]
+
+# --------------------------------------------------------------------------
+#  Restart otomatis setelah ada perubahan agar pengaturan baru dipakai.
+# --------------------------------------------------------------------------
+[power]
+restart_after_changes = true
+wait_timeout_seconds = 300
